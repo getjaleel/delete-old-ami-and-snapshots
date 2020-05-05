@@ -1,9 +1,7 @@
-import json
-import os
-import re
+import boto3
 from datetime  import datetime, timedelta
 from botocore.exceptions import ClientError
-import boto3
+
 
 myAccount = boto3.client('sts').get_caller_identity()['Account']
 ec2 = boto3.resource("ec2")
